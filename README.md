@@ -1,7 +1,6 @@
 ---
-layout: page
-title: Rails Mini-Project
-subheading: IdeaBox
+Project: IdeaBox, A Rails Mini-Project
+Name: Nikhil Shahi
 ---
 
 ### Setting Expectations

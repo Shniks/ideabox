@@ -41,6 +41,7 @@ gem 'launchy'
 gem 'pry'
 gem 'rspec-rails'
 gem 'shoulda-matchers'
+gem 'database_cleaner'
 gem 'simplecov', require: false, group: :test
 end
 

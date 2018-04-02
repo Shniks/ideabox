@@ -42,7 +42,7 @@ class IdeasController < ApplicationController
   def destroy
     @idea = Idea.find(params[:id])
     if @idea.destroy
-      flash[:success] = "#{@idea.title} deleted successfully!"
+      flash[:success] = "Deletion successful!"
       redirect_to ideas_path
     else
       flash[:failure] = "#{@idea.title} could not be deleted. Please try again!"

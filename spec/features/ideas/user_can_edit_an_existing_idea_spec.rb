@@ -9,7 +9,7 @@ describe 'User visits the edit path for an existing idea' do
 
     fill_in 'idea[title]', with: 'Stack Tripods'
     fill_in 'idea[description]', with: 'Stack Tripods Description'
-    click_on 'Update'
+    click_on 'Update Idea'
 
     expect(current_path).to eq(ideas_path)
     expect(page).to have_content('Stack Tripods')

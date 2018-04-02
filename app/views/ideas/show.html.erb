@@ -1,2 +1,8 @@
-<%= @idea.title %>
-<%= @idea.description %>
+<h3>Idea Title: <%= @idea.title %></h3>
+<table>
+  <tr class=idea_<%= @idea.id %>>
+    <td><%= @idea.description %></td>
+    <td title="Edit this Idea"><%= link_to image_tag("edit.png", height: 15, width: 15), edit_idea_path(@idea.id) %></td>
+    <td title="Delete this Idea"><%= link_to image_tag("delete.png", height: 15, width: 15), idea_path(@idea.id), method: "delete" %></td>
+  </tr>
+</table>

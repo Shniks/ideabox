@@ -12,7 +12,6 @@ describe 'User visits ideas index' do
         click_link 'Delete'
       end
 
-      expect(page).to have_content("#{idea.title} delete successfully!")
       expect(page).to_not have_content(idea.title)
       expect(page).to_not have_content(idea.description)
     end

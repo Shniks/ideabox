@@ -12,10 +12,10 @@ class IdeasController < ApplicationController
     @idea = Idea.new(idea_params)
     if @idea.save
       flash[:success] = "#{@idea.title} created successfully!"
-      redirect_to idea_path(@idea)
+      redirect_to ideas_path
     else
       flash[:failure] = "#{@idea.title} was not created. Please try again!"
-      render :new
+      redirect_to new_idea_path
     end
   end
 
@@ -35,18 +35,18 @@ class IdeasController < ApplicationController
       redirect_to ideas_path
     else
       flash[:failure] = "#{@idea.title} could not be updated. Please try again!"
-      render :edit
+      redirect_to edit_idea_path(@idea)
     end
   end
 
   def destroy
     @idea = Idea.find(params[:id])
     if @idea.destroy
-      redirect_to ideas_path
       flash[:success] = "#{@idea.title} deleted successfully!"
+      redirect_to ideas_path
     else
       flash[:failure] = "#{@idea.title} could not be deleted. Please try again!"
-      render :index
+      redirect_to ideas_path
     end
   end
 

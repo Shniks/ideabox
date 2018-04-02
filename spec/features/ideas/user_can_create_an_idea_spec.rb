@@ -11,7 +11,7 @@ describe 'User visits the "/ideas/new" page' do
 
       click_on 'Create Idea'
 
-      expect(current_path).to eq('/ideas/1')
+      expect(current_path).to eq(ideas_path)
       expect(page).to have_content('Sample Idea')
       expect(page).to have_content('Sample Description')
     end

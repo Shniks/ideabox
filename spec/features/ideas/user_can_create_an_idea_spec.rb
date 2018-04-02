@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-describe 'User visits the "/ideas/new" page' do
+describe 'User visits the new idea path to create a new idea' do
   describe 'They can fill in details for an idea and click submit' do
-    scenario 'They can see that idea\'s details on its show page' do
+    scenario 'They can see that new idea\'s details on the ideas index page' do
 
       visit new_idea_path
 

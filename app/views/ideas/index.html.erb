@@ -1,0 +1,11 @@
+<h2>List of Ideas</h2>
+<table>
+  <% @ideas.each do |idea| %>
+    <tr class=idea_<%= idea.id %>>
+      <td><%= idea.title %></td>
+      <td><%= idea.description %></td>
+      <td title="Edit this Idea"><%= link_to image_tag("edit.png", height: 15, width: 15), edit_idea_path(idea.id) %></td>
+      <td title="Delete this Idea"><%= link_to image_tag("delete.png", height: 15, width: 15), idea_path(idea.id), method: "delete" %></td>
+    </tr>
+  <% end %>
+</table>

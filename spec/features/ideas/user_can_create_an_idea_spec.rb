@@ -9,7 +9,7 @@ describe 'User visits the "/ideas/new" page' do
       fill_in 'idea[title]', with: 'Sample Idea'
       fill_in 'idea[description]', with: 'Sample Description'
 
-      click_on 'Submit Idea'
+      click_on 'Create Idea'
 
       expect(current_path).to eq('/ideas/1')
       expect(page).to have_content('Sample Idea')

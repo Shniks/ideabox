@@ -1,0 +1,15 @@
+<h3>Category Title: <%= @category.name %></h3>
+<p title="Delete this Category"><%= link_to image_tag("delete.png", height: 15, width: 15), category_path(@category.id), method: "delete" %></p>
+<table>
+  <th class="idea-list-1">Title</th>
+  <th class="idea-list-1">Description</th>
+  <th class="idea-list-2"></th>
+  <th class="idea-list-2"></th>
+  <% @category.ideas.each do |idea| %>
+    <tr class=idea_<%= idea.id %>>
+      <td class="idea-list"><%= link_to idea.title, idea_path(idea) %></td>
+      <td class="idea-list"><%= idea.description %></td>
+      <td class="idea-list-3" title="Edit"><%= link_to image_tag("edit.png", height: 15, width: 15), edit_idea_path(idea) %></td>
+      <td class="idea-list-3" title="Delete"><%= link_to image_tag("delete.png", height: 15, width: 15), idea_path(idea), method: "delete" %></td>
+  <% end %>
+</table>

@@ -41,7 +41,7 @@ describe Idea do
     context 'Valid attributes' do
       it 'Is valid with a title and a description' do
         category_1 = Category.create!(name: 'Photography')
-        idea = Idea.new(title: 'Idea 1 Idea', description: 'Idea 1 Description',  category: category_1)
+        idea = Idea.new(title: 'Idea 1 Idea', description: 'Idea 1 Description', category: category_1)
         expect(idea).to be_valid
       end
     end
@@ -51,5 +51,18 @@ describe Idea do
     scenario { should belong_to(:category) }
     scenario { should have_many(:hyperlinks) }
     scenario { should have_many(:images).through(:hyperlinks) }
+  end
+
+  describe 'Instance Methods' do
+    describe 'Image' do
+      scenario 'It captures an image for an idea' do
+        category_1 = Category.create!(name: 'Photography')
+        idea_1 = Idea.create!(title: 'Idea 1 Idea', description: 'Idea 1 Description', category: category_1)
+        idea_2 = Idea.create!(title: 'Idea 2 Idea', description: 'Idea 2 Description', category: category_1)
+        idea_1.images.create!(url: "https://2.img-dpreview.com/files/p/articles/1519251701/DPReview_Nikhil_Shahi_10.jpeg")
+
+        expect(idea_1.images.first.url).to eq("https://2.img-dpreview.com/files/p/articles/1519251701/DPReview_Nikhil_Shahi_10.jpeg")
+      end
+    end
   end
 end

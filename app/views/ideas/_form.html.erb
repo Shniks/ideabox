@@ -1,9 +1,12 @@
-<%= form_for @idea do |f| %>
+<%= form_for [@category, @idea] do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
 
   <%= f.label :description %>
   <%= f.text_field :description %>
+
+  <%= f.label :category %>
+  <%= f.collection_select(:category_id, Category.all, :id, :name) %>
 
   <%= f.submit %>
 <% end %>

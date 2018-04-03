@@ -31,15 +31,17 @@ describe Idea do
       end
 
       it 'Has a unique title and description' do
-        Idea.create(title: 'Title1', description: 'Great Idea')
-        idea = Idea.create(title: 'Title2', description: 'Great Idea 2')
+        category_1 = Category.create!(name: 'Photography')
+        Idea.create(title: 'Title1', description: 'Great Idea', category: category_1)
+        idea = Idea.create(title: 'Title2', description: 'Great Idea 2', category: category_1)
         expect(idea).to be_valid
       end
     end
 
     context 'Valid attributes' do
       it 'Is valid with a title and a description' do
-        idea = Idea.new(title: 'Idea 1 Idea', description: 'Idea 1 Description')
+        category_1 = Category.create!(name: 'Photography')
+        idea = Idea.new(title: 'Idea 1 Idea', description: 'Idea 1 Description',  category: category_1)
         expect(idea).to be_valid
       end
     end

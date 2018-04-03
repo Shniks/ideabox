@@ -4,7 +4,10 @@ describe 'User visits ideas index' do
   describe 'They click the delete button next to an idea' do
     scenario 'The idea is removed from the ideas index' do
 
-      idea = Idea.create!(title: 'Save Photos', description: 'Save Photos Description')
+      category_1 = Category.create!(name: 'Photography')
+      category_2 = Category.create!(name: 'Dancing')
+
+      idea = Idea.create!(title: 'Save Photos', description: 'Save Photos Description', category: category_1)
 
       visit ideas_path
 
@@ -14,6 +17,7 @@ describe 'User visits ideas index' do
 
       expect(page).to_not have_content(idea.title)
       expect(page).to_not have_content(idea.description)
+      expect(page).to_not have_content(idea.category.name)
     end
   end
 end

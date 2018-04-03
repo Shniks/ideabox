@@ -11,10 +11,10 @@ class IdeasController < ApplicationController
   def create
     @idea = Idea.new(idea_params)
     if @idea.save
-      flash[:success] = "#{@idea.title} created successfully!"
+      flash[:success] = "'#{@idea.title}' created successfully!"
       redirect_to ideas_path
     else
-      flash[:failure] = "#{@idea.title} was not created. Please try again!"
+      flash[:failure] = "'#{@idea.title}' was not created. Please try again!"
       redirect_to new_idea_path
     end
   end
@@ -43,16 +43,15 @@ class IdeasController < ApplicationController
     @idea = Idea.find(params[:id])
     if @idea.destroy
       flash[:success] = "Deletion successful!"
-      redirect_to ideas_path
     else
       flash[:failure] = "#{@idea.title} could not be deleted. Please try again!"
-      redirect_to ideas_path
     end
+    redirect_to ideas_path
   end
 
   private
 
   def idea_params
-    params.require(:idea).permit(:title, :description)
+    params.require(:idea).permit(:title, :description, :category_id)
   end
 end

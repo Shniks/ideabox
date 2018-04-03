@@ -19,9 +19,21 @@ describe Idea do
       end
 
       it 'Has a unique title' do
-        Idea.create(title: 'Title1')
-        idea = Idea.new(title: 'Title1')
+        Idea.create(title: 'Title1', description: 'Great Idea')
+        idea = Idea.create(title: 'Title1', description: 'Great Idea')
         expect(idea).to be_invalid
+      end
+
+      it 'Has a unique description' do
+        Idea.create(title: 'Title1', description: 'Great Idea')
+        idea = Idea.create(title: 'Title2', description: 'Great Idea')
+        expect(idea).to be_invalid
+      end
+
+      it 'Has a unique title and description' do
+        Idea.create(title: 'Title1', description: 'Great Idea')
+        idea = Idea.create(title: 'Title2', description: 'Great Idea 2')
+        expect(idea).to be_valid
       end
     end
 

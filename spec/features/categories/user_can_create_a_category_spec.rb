@@ -6,7 +6,7 @@ describe 'User visits a new category path to create a new category' do
 
       visit new_category_path
 
-      fill_in 'category[name]' with: 'Sample Category'
+      fill_in 'category[name]', with: 'Sample Category'
 
       click_on 'Create Category'
 

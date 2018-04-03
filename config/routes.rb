@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   resources :ideas
   resources :categories
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :users, only: [:new, :create, :show]
+
+  root "welcome#index"
 end

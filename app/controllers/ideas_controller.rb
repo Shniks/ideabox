@@ -11,10 +11,10 @@ class IdeasController < ApplicationController
   def create
     @idea = Idea.new(idea_params)
     if @idea.save
-      flash[:success] = "#{@idea.title} created successfully!"
+      flash[:success] = "'#{@idea.title}' created successfully!"
       redirect_to ideas_path
     else
-      flash[:failure] = "#{@idea.title} was not created. Please try again!"
+      flash[:failure] = "'#{@idea.title}' was not created. Please try again!"
       redirect_to new_idea_path
     end
   end

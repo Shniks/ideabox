@@ -10,7 +10,7 @@ describe 'User visits a new category path to create a new category' do
 
       click_on 'Create Category'
 
-      expect(path).to eq(categories_path)
+      expect(current_path).to eq(categories_path)
       expect(page).to have_content('Sample Category')
     end
   end

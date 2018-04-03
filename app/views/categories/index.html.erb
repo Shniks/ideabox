@@ -1,0 +1,10 @@
+<h2> List of Categories </h2>
+<table>
+  <% @categories.each do |category| %>
+    <tr class=category_<%= category.id %>>
+      <td><%= category.name %></td>
+      <td title="Edit this Category"><%= link_to image_tag("edit.png", height: 15, width: 15), edit_category_path(category.id) %></td>
+      <td title="Delete this Category"><%= link_to image_tag("delete.png", height: 15, width: 15), category_path(category.id), method: "delete" %></td>
+    </tr>
+  <% end %>
+</table>

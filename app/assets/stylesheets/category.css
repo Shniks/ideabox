@@ -1,0 +1,48 @@
+h2 {
+  margin-left: 12px;
+  font-size: 40px;
+  font-family: Helvetica;
+}
+
+h3 {
+  margin-left: 15px;
+  margin-top: 40px;
+  font-size: 20px;
+  font-family: Helvetica;
+}
+
+table {
+  margin-left: 15px;
+  margin-top: 30px;
+}
+
+.failure {
+  margin-left: 15px;
+  margin-top: 30px;
+  color: red;
+  font-family: Helvetica;
+  font-size: 24px;
+}
+
+#add-label {
+  margin-left: 15px;
+  font-family: Helvetica;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-name {
+  font-size: 16px;
+  font-family: Helvetica;
+  padding-right: 60px;
+}
+
+td {
+  font-size: 14px;
+  font-family: Helvetica;
+  padding-right: 10px;
+  padding-bottom: 15px;
+}

@@ -12,7 +12,7 @@ describe 'User visits categories index' do
         click_link 'Delete'
       end
 
-      expect(page).to_not have_content(category.title)
+      expect(page).to_not have_content(category.name)
     end
   end
 end

@@ -1,0 +1,140 @@
+h3 {
+  margin-left: 12px;
+  font-family: Helvetica;
+  font-size: 40px;
+}
+
+h2 {
+  margin-left: 15px;
+  margin-top: 40px;
+  font-size: 20px;
+  font-family: Helvetica;
+}
+
+h5 {
+  margin-left: 15px;
+  font-size: 16px;
+  font-family: Helvetica;
+  margin-bottom: -20px;
+}
+
+
+#add-idea-label {
+  margin-left: 15px;
+  padding-bottom: 120px;
+  font-family: Helvetica;
+}
+
+.idea-list {
+  font-size: 16px;
+  font-family: Helvetica;
+  padding-right: 60px;
+  padding-bottom: 15px;
+  text-align: left;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.idea-list-1 {
+  font-size: 20px;
+  font-family: Helvetica;
+  font-weight: bold;
+  padding-right: 60px;
+  background-color: #4f4f4f;
+  text-align: left;
+  color: white;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.idea-list-2 {
+  font-size: 20px;
+  font-family: Helvetica;
+  font-weight: bold;
+  background-color: #4f4f4f;
+  color: white;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.idea-list-3 {
+  font-size: 16px;
+  font-family: Helvetica;
+  padding-bottom: 15px;
+  text-align: center;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.idea-list-4 {
+  font-size: 16px;
+  font-family: Helvetica;
+  font-weight: bold;
+  padding-right: 60px;
+  background-color: #4f4f4f;
+  color: white;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.idea-list-5 {
+  font-size: 22px;
+  font-family: Helvetica;
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.idea-list-6 {
+  font-size: 16px;
+  font-family: Helvetica;
+  font-weight: bold;
+  background-color: #4f4f4f;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.idea-list-7 {
+  font-size: 24px;
+  font-family: Helvetica;
+  font-weight: bold;
+  text-align: left;
+  padding-right: 0px;
+  background-color: #4f4f4f;
+  color: white;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.idea-list-8 {
+  font-size: 24px;
+  font-family: Helvetica;
+  font-weight: bold;
+  background-color: #4f4f4f;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.all-ideas-list {
+  margin-left: 0px;
+  font-family: Helvetica;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+.idea-list-1 a, .idea-list-2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.buttons-container-1 {
+  margin-left: 15px;
+  margin-top: 50px;
+}
+
+.idea-show-page {
+  margin-left: 0px;
+}

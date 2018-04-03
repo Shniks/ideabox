@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :ideas
   resources :categories
 
-  resources :users, only: [:new]
+  resources :users, only: [:new, :create, :show]
 
   root "welcome#index"
 end

@@ -49,7 +49,7 @@ describe Idea do
 
   describe 'Relationships' do
     scenario { should belong_to(:category) }
-    scenario { should have_many(:images) }
-    scenario { should have_many(:images).through(:imaging) }
+    scenario { should have_many(:hyperlinks) }
+    scenario { should have_many(:images).through(:hyperlinks) }
   end
 end

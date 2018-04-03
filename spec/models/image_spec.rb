@@ -6,7 +6,7 @@ RSpec.describe Image, type: :model do
   end
 
   describe 'Relationships' do
-    scenario { should have_many(:ideas) }
-    scenario { should have_many(:ideas).through(:imaging) }
+    scenario { should have_many(:hyperlinks) }
+    scenario { should have_many(:ideas).through(:hyperlinks) }
   end
 end

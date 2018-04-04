@@ -4,5 +4,5 @@ class User < ApplicationRecord
 
   enum role: ["default", "admin"]
 
-  has_many :ideas
+  has_many :ideas, dependent: :destroy
 end

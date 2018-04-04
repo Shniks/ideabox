@@ -7,6 +7,11 @@
 <table>
   <% @ideas.each do |idea| %>
     <tr class=idea_<%= idea.id %>>
+      <tr>
+        <% idea.images.each do |image| %>
+        <td><img src="<%= image.url %>" alt="<%= image.name %>"/></td>
+        <% end %>
+      </tr>
       <td><%= link_to idea.title, idea_path(idea) %></td>
       <td><%= idea.category.name %></td>
       <td><%= idea.description %></td>

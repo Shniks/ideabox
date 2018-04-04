@@ -10,3 +10,7 @@
     <tr><td>Description: <%= @idea.description %></td></tr>
   </tr>
 </table>
+<h2>Associated Images: </h2>
+<% @idea.images.each do |image| %>
+  <img src="<%= image.url %>" alt="<%= image.name %>"/>
+<% end %>

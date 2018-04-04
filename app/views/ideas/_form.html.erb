@@ -7,7 +7,14 @@
   <%= f.text_area :description %>
 
   <%= f.label :category %>
-  <%= f.collection_select(:category_id, Category.all, :id, :name) %>
+  <%= f.collection_select(:category_id, Category.order(:name), :id, :name) %>
+
+  <%= f.label :image %>
+  <%= f.collection_check_boxes(:image_ids, Image.all, :id, :name) do |t| %>
+    <%= t.label do %>
+      <%= t.check_box + t.text %>
+    <% end %>
+  <% end %>
 
   <%= f.submit %>
 <% end %>

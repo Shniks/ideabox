@@ -2,7 +2,9 @@ require 'rails_helper'
 
 describe 'User visits a categories show page' do
   scenario 'They see a list of all the ideas for that category' do
-    user = User.create!(username: 'Nikhil', password: 'password')
+    user = User.create(username: 'Nikhil', password: 'password', role: 1)
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
     category_1 = Category.create!(name: 'Photography')
     category_2 = Category.create!(name: 'Knitting')
     idea_1 = user.ideas.create!(title: 'Uno', description: 'Great Idea', category: category_1)

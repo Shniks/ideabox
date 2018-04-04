@@ -1,11 +1,13 @@
 class IdeasController < ApplicationController
+  before_action :require_login
+  #put in a before action for the show, edit and update and destroy
 
   def index
     @ideas = current_user.ideas
   end
 
   def new
-    @idea = current_user.ideas.new
+    @idea = Idea.new
   end
 
   def create
@@ -50,6 +52,10 @@ class IdeasController < ApplicationController
   end
 
   private
+
+  def require_login
+    render file: "/public/404" unless current_user
+  end
 
   def idea_params
     params.require(:idea).permit(:title, :description, :category_id)

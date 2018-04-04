@@ -1,12 +1,12 @@
 class CategoriesController < ApplicationController
   before_action :require_admin
+  before_action :set_category, only: %i[show destroy]
 
   def index
     @categories = Category.all
   end
 
   def show
-    @category = Category.find(params[:id])
   end
 
   def new
@@ -20,12 +20,11 @@ class CategoriesController < ApplicationController
       redirect_to categories_path
     else
       flash[:failure] = "'#{@category.name}' was not created. Please try again!"
-      redirect_to new_category_path
+      render :new
     end
   end
 
   def destroy
-    @category = Category.find(params[:id])
     if @category.destroy
       flash[:success] = "Deletion successful!"
     else
@@ -35,6 +34,10 @@ class CategoriesController < ApplicationController
   end
 
   private
+
+    def set_category
+      @category = Category.find(params[:id])
+    end
 
     def require_admin
       render file: "/public/404" unless current_admin?

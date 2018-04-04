@@ -2,21 +2,50 @@
 <html>
   <head>
     <title>Ideabox</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
     <header class="main-header">
-    <h1><a href="/">Idea Box</a></h1>
+    <a href="/"><%= image_tag 'ideabox1.png', :class => "main-logo"%></a>
     </header>
-
     <div class="navbar">
-      <!-- <a id="home" href="/"></a> -->
       <nav id="main_nav">
-        <!-- <a id="home" href="/">Home</a> -->
-        <% if current_user %>
+        <% if current_admin? %>
+          <div class="dropdown">
+            <a class="dropbtn">Ideas
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/ideas/new">Create New Idea</a>
+              <a href="/ideas">List All Ideas</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="dropbtn">Categories
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/categories/new">Create New Category</a>
+              <a href="/categories">List All Categories</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="dropbtn">Images
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/images/new">Create New Image</a>
+              <a href="/images">List All Images</a>
+            </div>
+          </div>
+          <section class="admin">
+            <%= image_tag 'person-1.png', :class => "admin-logo" %>
+            <%= link_to "Log Out", logout_path %>
+          </section>
+        <% elsif current_user  %>
           <div class="dropdown">
             <a class="dropbtn">My IdeaBox
               <i class="fa fa-caret-down"></i>
@@ -26,29 +55,18 @@
               <a href="/ideas">List All Ideas</a>
             </div>
           </div>
-        <!-- If current_admin? then show other dropdowns -->
           <section class="admin">
             <%= image_tag 'person-1.png', :class => "admin-logo" %>
-            <%= link_to "Logout", logout_path %>
-            <!-- <a href="/logout">Logout</a> -->
+            <%= link_to "Log Out", logout_path %>
           </section>
-          <% else %>
-          <section class="admin">
-            <%= image_tag 'person-1.png', :class => "admin-logo" %>
-            <%= link_to "Register New Account", new_user_path %>
-            <%= image_tag 'person-1.png', :class => "admin-logo" %>
-            <%= link_to "Login", login_path %>
-            <!-- <a href="/login">Login</a> -->
-          </section>
+        <% else %>
+            <section class="admin">
+              <%= image_tag 'register.png', :class => "register-logo" %>
+              <%= link_to "Sign Up", new_user_path %>
+              <%= image_tag 'person-1.png', :class => "admin-logo" %>
+              <%= link_to "Log In", login_path %>
+            </section>
         <% end %>
-        <!-- <div class="dropdown">
-          <a class="dropbtn">
-            <i class="fa fa-caret-down"></i>
-          </a>
-          <div> -->
-            <!-- <a href="/categories/new">Create New Category</a>
-            <a href="/categories">List All Categories</a> -->
-          <!-- </div> -->
         </div>
       </nav>
     </div>

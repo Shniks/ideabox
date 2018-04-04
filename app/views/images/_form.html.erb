@@ -1,0 +1,7 @@
+<%= stylesheet_link_tag "create_edit" %>
+<%= form_for @image do |f| %>
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+
+  <%= f.submit %>
+<% end %>

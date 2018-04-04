@@ -8,7 +8,7 @@ describe 'Admin visits a new image path to create a new image' do
 
       visit new_image_path
 
-      fill_in 'iamge[url]', with: 'http://www.sampleimage.com'
+      fill_in 'image[url]', with: 'http://www.sampleimage.com'
 
       click_on 'Create Image'
 
@@ -36,7 +36,7 @@ describe 'Anonymous User visits a new category path to create a new image' do
 
     visit new_image_path
 
-    expect(current_path).to eq(new_iamge_path)
+    expect(current_path).to eq(new_image_path)
     expect(page).to have_content('404')
   end
 end

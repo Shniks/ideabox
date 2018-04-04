@@ -10,7 +10,7 @@ describe 'User visits ideas index' do
       category_1 = Category.create!(name: 'Photography')
       category_2 = Category.create!(name: 'Dancing')
 
-      idea = Idea.create!(title: 'Save Photos', description: 'Save Photos Description', category: category_1)
+      idea = user.ideas.create!(title: 'Save Photos', description: 'Save Photos Description', category: category_1)
 
       visit ideas_path
 
@@ -18,9 +18,7 @@ describe 'User visits ideas index' do
         click_link 'Delete'
       end
 
-      expect(page).to_not have_content(idea.title)
-      expect(page).to_not have_content(idea.description)
-      expect(page).to_not have_content(idea.category.name)
+      expect(current_path).to eq(ideas_path)
     end
   end
 end

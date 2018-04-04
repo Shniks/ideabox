@@ -9,7 +9,7 @@ describe 'User visits the edit path for an existing idea' do
     category_1 = Category.create!(name: 'Photography')
     category_2 = Category.create!(name: 'Dancing')
 
-    idea = Idea.create!(title: 'Save Photos', description: 'Save Photos Description', category:
+    idea = user.ideas.create!(title: 'Save Photos', description: 'Save Photos Description', category:
     category_2)
 
     visit edit_idea_path(idea)

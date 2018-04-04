@@ -9,9 +9,9 @@ describe 'User visits the ideas index' do
     category_1 = Category.create!(name: 'Photography')
     category_2 = Category.create!(name: 'Dancing')
 
-    idea_1 = Idea.create!(title: 'Uno', description: 'Great Idea', category: category_1)
-    idea_2 = Idea.create!(title: 'Dos', description: 'Photos Description', category: category_2)
-    idea_3 = Idea.create!(title: 'Tres', description: 'More Photos Description', category: category_1)
+    idea_1 = user.ideas.create!(title: 'Uno', description: 'Great Idea', category: category_1)
+    idea_2 = user.ideas.create!(title: 'Dos', description: 'Photos Description', category: category_2)
+    idea_3 = user.ideas.create!(title: 'Tres', description: 'More Photos Description', category: category_1)
 
     visit ideas_path
 

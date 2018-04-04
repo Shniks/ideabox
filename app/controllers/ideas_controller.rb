@@ -1,6 +1,6 @@
 class IdeasController < ApplicationController
   before_action :require_login
-  #put in a before action for the show, edit and update and destroy
+  before_action :set_idea, only: %i[show edit update destroy]
 
   def index
     @ideas = current_user.ideas
@@ -22,15 +22,12 @@ class IdeasController < ApplicationController
   end
 
   def show
-    @idea = current_user.ideas.find(params[:id])
   end
 
   def edit
-    @idea = current_user.ideas.find(params[:id])
   end
 
   def update
-    @idea = current_user.ideas.find(params[:id])
     @idea.update(idea_params)
     if @idea.save
       flash[:success] = "#{@idea.title} updated successfully!"
@@ -42,7 +39,6 @@ class IdeasController < ApplicationController
   end
 
   def destroy
-    @idea = current_user.ideas.find(params[:id])
     if @idea.destroy
       flash[:success] = "Deletion successful!"
     else
@@ -52,6 +48,10 @@ class IdeasController < ApplicationController
   end
 
   private
+
+  def set_idea
+    @idea = current_user.ideas.find(params[:id])
+  end
 
   def require_login
     render file: "/public/404" unless current_user

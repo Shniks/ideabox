@@ -1,5 +1,5 @@
 class Image < ApplicationRecord
-  validates :url, presence: true
+  validates :url, :name, presence: true
 
   has_many :hyperlinks
   has_many :ideas, through: :hyperlinks

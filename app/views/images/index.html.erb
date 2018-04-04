@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag "category" %>
+<header>
+  <h2> List of Images </h2>
+  <span id="add-label" title="Add a New Image"><%= link_to image_tag("new_image.png", height: 35, width: 35), new_image_path %>
+</header>
+<table>
+  <% @images.each do |image| %>
+    <tr class=image_<%= image.id %>>
+      <td><%= link_to image.name, image_path(image) %></td>
+      <td><%= image_tag image.url  %></td>
+      <td title="Delete this Image"><%= link_to image_tag("delete.png", height: 15, width: 15), image_path(image.id), method: "delete" %></td>
+    </tr>
+  <% end %>
+</table>

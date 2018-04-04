@@ -54,18 +54,4 @@ describe Idea do
     scenario { should have_many(:hyperlinks) }
     scenario { should have_many(:images).through(:hyperlinks) }
   end
-
-  describe 'Instance Methods' do
-    describe 'Image' do
-      scenario 'It captures an image for an idea' do
-        user = User.create!(username: 'Nikhil', password: 'password')
-        category_1 = Category.create!(name: 'Photography')
-        idea_1 = user.ideas.create!(title: 'Idea 1 Idea', description: 'Idea 1 Description', category: category_1)
-        idea_2 = user.ideas.create!(title: 'Idea 2 Idea', description: 'Idea 2 Description', category: category_1)
-        idea_1.images.create!(url: "https://2.img-dpreview.com/files/p/articles/1519251701/DPReview_Nikhil_Shahi_10.jpeg")
-
-        expect(idea_1.images.first.url).to eq("https://2.img-dpreview.com/files/p/articles/1519251701/DPReview_Nikhil_Shahi_10.jpeg")
-      end
-    end
-  end
 end

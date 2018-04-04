@@ -8,12 +8,13 @@ describe 'Admin visits a new image path to create a new image' do
 
       visit new_image_path
 
+      fill_in 'image[name]', with: 'Awesome Image'
       fill_in 'image[url]', with: 'http://www.sampleimage.com'
 
       click_on 'Create Image'
 
       expect(current_path).to eq(images_path)
-      expect(page).to have_content('http://www.sampleimage.com')
+      expect(page).to have_content('Awesome Image')
     end
   end
 end

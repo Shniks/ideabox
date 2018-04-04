@@ -1,4 +1,4 @@
-equire 'rails_helper'
+require 'rails_helper'
 
 describe 'Admin visits the images index' do
   describe 'They click the delete button next to the image' do
@@ -7,7 +7,7 @@ describe 'Admin visits the images index' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
 
-      image = Image.create(name: 'Test Photo', url: 'www.testphoto.com/test.jpg')
+      image = Image.create(name: 'Test Photo', url: 'https://2.img-dpreview.com/files/p/articles/1519251701/DPReview_Nikhil_Shahi_10.jpeg')
 
       visit images_path
 

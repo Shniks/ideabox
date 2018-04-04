@@ -2,6 +2,9 @@ require 'rails_helper'
 
 describe 'User visits the ideas index' do
   scenario 'They can a list of all the ideas' do
+    user = User.create!(username: 'Nikhil', password: 'password')
+    allow_any_instance_of(ApplicationController).
+    to receive(:current_user).and_return(user)
 
     category_1 = Category.create!(name: 'Photography')
     category_2 = Category.create!(name: 'Dancing')

@@ -3,6 +3,9 @@ require 'rails_helper'
 describe 'User visits categories index' do
   describe 'They click the delete button next to category' do
     scenario 'The category is removed from the categories index' do
+      user = User.create(username: 'Nikhil', password: 'password', role: 1)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
 
       category = Category.create!(name: 'Photography')
 

@@ -3,9 +3,11 @@ require 'rails_helper'
 describe 'User visits the new idea path to create a new idea' do
   describe 'They can fill in details for an idea and click submit' do
     scenario 'They can see that new idea\'s details on the ideas index page' do
-
+      user = User.create!(username: 'Nikhil', password: 'password')
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       Category.create!(name: 'Photography')
       Category.create!(name: 'Dancing')
+
 
       visit new_idea_path
 

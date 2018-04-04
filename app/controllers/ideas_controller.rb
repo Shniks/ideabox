@@ -1,34 +1,34 @@
 class IdeasController < ApplicationController
 
   def index
-    @ideas = Idea.all
+    @ideas = current_user.ideas
   end
 
   def new
-    @idea = Idea.new
+    @idea = current_user.ideas.new
   end
 
   def create
-    @idea = Idea.new(idea_params)
+    @idea = current_user.ideas.new(idea_params)
     if @idea.save
       flash[:success] = "'#{@idea.title}' created successfully!"
       redirect_to ideas_path
     else
       flash[:failure] = "'#{@idea.title}' was not created. Please try again!"
-      redirect_to new_idea_path
+      render :new
     end
   end
 
   def show
-    @idea = Idea.find(params[:id])
+    @idea = current_user.ideas.find(params[:id])
   end
 
   def edit
-    @idea = Idea.find(params[:id])
+    @idea = current_user.ideas.find(params[:id])
   end
 
   def update
-    @idea = Idea.find(params[:id])
+    @idea = current_user.ideas.find(params[:id])
     @idea.update(idea_params)
     if @idea.save
       flash[:success] = "#{@idea.title} updated successfully!"
@@ -40,7 +40,7 @@ class IdeasController < ApplicationController
   end
 
   def destroy
-    @idea = Idea.find(params[:id])
+    @idea = current_user.ideas.find(params[:id])
     if @idea.destroy
       flash[:success] = "Deletion successful!"
     else

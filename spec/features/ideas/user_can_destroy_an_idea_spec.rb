@@ -14,9 +14,7 @@ describe 'User visits ideas index' do
 
       visit ideas_path
 
-      within(".idea_#{idea.id}") do
-        click_link 'Delete'
-      end
+      click_link 'Delete'
 
       expect(current_path).to eq(ideas_path)
     end

@@ -13,11 +13,11 @@
     </header>
 
     <div class="navbar">
-      <a id="home" href="/"></a>
+      <!-- <a id="home" href="/"></a> -->
       <nav id="main_nav">
-        <a id="home" href="/">Home</a>
+        <!-- <a id="home" href="/">Home</a> -->
         <div class="dropdown">
-          <a class="dropbtn">Ideas
+          <a class="dropbtn">My IdeaBox
             <i class="fa fa-caret-down"></i>
           </a>
           <div class="dropdown-content">
@@ -25,15 +25,19 @@
             <a href="/ideas">List All Ideas</a>
           </div>
         </div>
-        <div class="dropdown">
-          <a class="dropbtn">Categories
+        <section class="admin">
+          <%= image_tag 'person-1.png', :class => "admin-logo" %>
+          <a href="/logout">Logout</a>
+        </section>
+        <!-- <div class="dropdown">
+          <a class="dropbtn">
             <i class="fa fa-caret-down"></i>
           </a>
-          <div class="dropdown-content">
-            <a href="/categories/new">Create New Category</a>
-            <a href="/categories">List All Categories</a>
-          </div>
-        </div> -->
+          <div> -->
+            <!-- <a href="/categories/new">Create New Category</a>
+            <a href="/categories">List All Categories</a> -->
+          <!-- </div> -->
+        </div>
       </nav>
     </div>
     <% flash.each do |name, msg| %>

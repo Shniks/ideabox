@@ -1,10 +1,45 @@
+/* Navbar Container */
+.navbar {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  background-color: #25292e;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.admin {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 30px;
+  padding-top: 10px;
+  margin-right: 20px;
+  height: 30px;
+}
+
+.admin-logo {
+  height: 20px;
+  width: 20px;
+  padding-bottom: 3px;
+}
+
+.admin a {
+  font-family: Helvetica;
+  font-weight: lighter;
+  text-decoration: none;
+  color: #4699ce;
+  margin-bottom: 3px;
+}
+
 /* Main Header */
 .main-header {
   display: flex;
   justify-content: left;
   border: 3px;
   font-family: Helvetica;
-  height: 40px;
+  height: 36px;
   font-size: 20px;
   font-weight: lighter;
   color: white;
@@ -16,16 +51,6 @@
 header a {
   color: white;
   text-decoration: none;
-}
-
- /* Navbar Container */
-.navbar {
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  background-color: #25292e;
-  box-shadow: 10px 10px 5px grey;
 }
 
 /* Links inside the navbar */

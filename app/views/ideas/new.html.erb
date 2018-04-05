@@ -1,3 +1,4 @@
 <%= stylesheet_link_tag "create_edit" %>
-<h2>Create a New Idea</h2>
+<p class="previous-icon" title="Return to Index"><%= link_to image_tag("return.png", height: 35, width: 125), ideas_path %></p>
+<p class="idea-main-title">Create a New Idea</p>
 <%= render partial: "form" %>

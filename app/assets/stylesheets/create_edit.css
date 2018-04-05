@@ -81,19 +81,21 @@ select, input, textarea {
 }
 
 .failure {
+  position: absolute;
   margin-left: 15px;
-  margin-top: 30px;
+  margin-top: 5px;
   color: red;
   font-family: Helvetica;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .success {
+  position: absolute;
   margin-left: 15px;
-  margin-top: 30px;
+  margin-top: 5px;
   color: green;
   font-family: Helvetica;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .buttons-container input {

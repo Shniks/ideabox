@@ -284,3 +284,21 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 .idea-show-page {
   margin-left: 0px;
 }
+
+.failure {
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 5px;
+  color: red;
+  font-family: Helvetica;
+  font-size: 20px;
+}
+
+.success {
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 5px;
+  color: green;
+  font-family: Helvetica;
+  font-size: 20px;
+}

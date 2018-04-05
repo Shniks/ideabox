@@ -46,7 +46,7 @@
   justify-content: flex-start;
 }
 
-img {
+.idea-images {
   max-width: 100%;
   max-height: 100%;
 }
@@ -57,8 +57,8 @@ article {
   margin-bottom: 20px;
   margin-left: 15px;
   margin-right: 30px;
-  width: 24%;
-  height: auto;
+  width: 300px;
+  height: 300px;
   box-shadow: 10px 10px 5px grey;
 }
 

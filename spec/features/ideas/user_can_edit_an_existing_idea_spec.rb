@@ -21,6 +21,5 @@ describe 'User visits the edit path for an existing idea' do
 
     expect(current_path).to eq(ideas_path)
     expect(page).to have_content('Stack Tripods')
-    expect(page).to have_content(category_1.name)
   end
 end

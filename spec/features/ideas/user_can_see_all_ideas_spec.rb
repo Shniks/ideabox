@@ -17,11 +17,7 @@ describe 'User visits the ideas index' do
 
     expect(current_path).to eq(ideas_path)
     expect(page).to have_content(idea_1.title)
-    expect(page).to have_content(idea_1.description)
-    expect(page).to have_content(idea_1.category.name)
     expect(page).to have_content(idea_2.title)
-    expect(page).to have_content(idea_2.description)
     expect(page).to have_content(idea_3.title)
-    expect(page).to have_content(idea_3.description)
   end
 end

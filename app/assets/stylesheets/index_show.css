@@ -1,7 +1,61 @@
-h3 {
-  margin-left: 12px;
-  font-family: Helvetica;
+.previous-icon {
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.idea-main-title {
+  margin-left: 10px;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
   font-size: 40px;
+  color: #363636;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+}
+
+.info-1 {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Helvetica;
+  color: #363636;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+  padding-top: 15px;
+  padding-left: 15px;
+  box-shadow: 5px 5px 5px #939599;
+  list-style-type: none;
+  background-color: #e7e7e8;
+  text-transform: uppercase;
+}
+
+.info-2 {
+  font-size: 20px;
+  font-family: Helvetica;
+  color: #363636;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+  padding-top: 15px;
+  padding-left: 15px;
+  list-style-type: none;
+}
+
+.idea-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: 30px;
+  width: 24%;
+  height: auto;
+  box-shadow: 10px 10px 5px grey;
 }
 
 h2 {
@@ -25,15 +79,13 @@ h5 {
   font-family: Helvetica;
 }
 
-.idea-list {
-  font-size: 16px;
-  font-family: Helvetica;
-  padding-right: 60px;
+.idea-title-icon {
   padding-bottom: 15px;
   text-align: left;
-  padding-top: 15px;
+  padding-top: 10px;
   padding-left: 10px;
 }
+
 
 .idea-list-1 {
   font-size: 20px;

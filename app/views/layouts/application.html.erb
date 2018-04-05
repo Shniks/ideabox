@@ -9,7 +9,7 @@
 
   <body>
     <header class="main-header">
-    <a href="/"><%= image_tag 'ideabox1.png', :class => "main-logo"%></a>
+    <a href="#"><%= image_tag 'ideabox1.png', :class => "main-logo"%></a>
     </header>
     <div class="navbar">
       <nav id="main_nav">
@@ -43,7 +43,7 @@
           </div>
           <section class="admin">
             <%= image_tag 'person-1.png', :class => "admin-logo" %>
-            <%= link_to "Log Out", logout_path %>
+            <%= link_to "Log Out", logout_path, :class => "admin-logo-text" %>
           </section>
         <% elsif current_user  %>
           <div class="dropdown">
@@ -57,14 +57,14 @@
           </div>
           <section class="admin">
             <%= image_tag 'person-1.png', :class => "admin-logo" %>
-            <%= link_to "Log Out", logout_path %>
+            <%= link_to "Log Out", logout_path, :class => "admin-logo-text" %>
           </section>
         <% else %>
             <section class="admin">
               <%= image_tag 'register.png', :class => "register-logo" %>
-              <%= link_to "Sign Up", new_user_path %>
+              <%= link_to "Sign Up", new_user_path, :class => "admin-logo-text" %>
               <%= image_tag 'person-1.png', :class => "admin-logo" %>
-              <%= link_to "Log In", login_path %>
+              <%= link_to "Log In", login_path, :class => "admin-logo-text" %>
             </section>
         <% end %>
         </div>

@@ -1,16 +1,19 @@
 <%= stylesheet_link_tag "index_show" %>
-<table>
-  <td><h3>Idea: <%= @idea.title %></h3></td>
-  <td><p title="Edit this Idea"><%= link_to image_tag("edit.png", height: 15, width: 15), edit_idea_path(@idea.id) %></p></td>
-  <td><p title="Delete this Idea"><%= link_to image_tag("delete.png", height: 15, width: 15), idea_path(@idea.id), method: "delete" %></p></td>
+<p class="previous-icon" title="Return to Index"><%= link_to image_tag("return.png", height: 35, width: 125), ideas_path %></p>
+<table >
+  <td><h3 class="idea-main-title"><%= @idea.title %></h3></td>
+  <td class="idea-title-icon"><p title="Edit this Idea"><%= link_to image_tag("edit.png", height: 25, width: 25), edit_idea_path(@idea.id) %></p></td>
+  <td class="idea-title-icon"><p title="Delete this Idea"><%= link_to image_tag("delete.png", height: 25, width: 25), idea_path(@idea.id), method: "delete" %></p></td>
 </table>
-<table>
-  <tr class=idea_<%= @idea.id %>>
-    <tr>Category: <%= @idea.category.name %></tr>
-    <tr><td>Description: <%= @idea.description %></td></tr>
-  </tr>
-</table>
-<h2>Associated Images: </h2>
-<% @idea.images.each do |image| %>
-  <img src="<%= image.url %>" alt="<%= image.name %>"/>
-<% end %>
+<li class="info-1">Category</li>
+<li class="info-2"><%= @idea.category.name %></li>
+<li class="info-1">Description</li>
+<li class="info-2"><%= @idea.description %></li>
+<li class="info-1">Assigned Images </li>
+<section class="idea-images">
+  <% @idea.images.each do |image| %>
+    <article>
+      <img src="<%= image.url %>" alt="<%= image.name %>"/>
+    </article>
+  <% end %>
+</section>

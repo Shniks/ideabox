@@ -13,7 +13,7 @@
 <section class="idea-images">
   <% @idea.images.each do |image| %>
     <article>
-      <img src="<%= image.url %>" alt="<%= image.name %>"/>
+      <img class="idea-images" src="<%= image.url %>" alt="<%= image.name %>"/>
     </article>
   <% end %>
 </section>

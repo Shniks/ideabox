@@ -1,22 +1,21 @@
 
-<%= stylesheet_link_tag "category" %>
-<header>
-  <h2>List of Ideas</h2>
-  <span id="add-label" title="Create a New Idea"><%= link_to image_tag("idea.png", height: 35, width: 35), new_idea_path %>
-</header>
+<%= stylesheet_link_tag "index_show" %>
 <table>
-  <% @ideas.each do |idea| %>
-    <tr class=idea_<%= idea.id %>>
-      <tr>
-        <% idea.images.each do |image| %>
-        <td><img src="<%= image.url %>" alt="<%= image.name %>"/></td>
-        <% end %>
-      </tr>
-      <td><%= link_to idea.title, idea_path(idea) %></td>
-      <td><%= idea.category.name %></td>
-      <td><%= idea.description %></td>
-      <td title="Edit this Idea"><%= link_to image_tag("edit.png", height: 15, width: 15), edit_idea_path(idea.id) %></td>
-      <td title="Delete this Idea"><%= link_to image_tag("delete.png", height: 15, width: 15), idea_path(idea.id), method: "delete" %></td>
-    </tr>
-  <% end %>
+  <td><h3 class="idea-main-title"><%= current_user.username %>'s Idea Box</h3></td>
+  <td class="add-idea-label" ><p title="Create a New Idea"><%= link_to image_tag("idea.png", height: 60, width: 60), new_idea_path %></p></td>
 </table>
+<% @ideas.each do |idea| %>
+  <table class="index-ideas-list-title">
+    <td><h3 class="idea-main-title-index"><%= link_to idea.title, idea_path(idea) %></h3></td>
+    <td class="idea-title-icon"><p title="Edit this Idea"><%= link_to image_tag("edit.png", height: 25, width: 25), edit_idea_path(idea.id) %></p></td>
+    <td class="idea-title-icon"><p title="Delete this Idea"><%= link_to image_tag("delete.png", height: 25, width: 25), idea_path(idea.id), method: "delete" %></p></td>
+  </table>
+  <hr/>
+  <section class="idea-images">
+    <% idea.images.each do |image| %>
+      <article class="index-images">
+        <img class="idea-images" src="<%= image.url %>" alt="<%= image.name %>"/>
+      </article>
+    <% end %>
+  </section>
+<% end %>

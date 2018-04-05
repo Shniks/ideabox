@@ -146,6 +146,17 @@ article {
   box-shadow: 10px 10px 5px grey;
 }
 
+.admin-images {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: 30px;
+  width: 100px;
+  height:100px;
+  box-shadow: 10px 10px 5px grey;
+}
+
 .welcome-message {
   margin-left: 10px;
 }
@@ -172,8 +183,23 @@ h5 {
   padding-top: -100px;
 }
 
+.add-image-label {
+  padding-left: 40px;
+  padding-top: 20px;
+  font-family: Helvetica;
+  margin-bottom: 40px;
+}
+
 .idea-title-icon {
   padding-bottom: 15px;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 10px;
+  list-style-type: none;
+}
+
+.image-title-icon {
+  padding-bottom: 19px;
   text-align: left;
   padding-top: 10px;
   padding-left: 10px;
@@ -283,4 +309,22 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
 .idea-show-page {
   margin-left: 0px;
+}
+
+.failure {
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 5px;
+  color: red;
+  font-family: Helvetica;
+  font-size: 20px;
+}
+
+.success {
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 5px;
+  color: green;
+  font-family: Helvetica;
+  font-size: 20px;
 }

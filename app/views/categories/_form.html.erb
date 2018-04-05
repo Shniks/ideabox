@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag "create_edit" %>
 <%= form_for @category do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.label :name, class: 'info-1' %>
+  <%= f.text_field :name, class: 'info-2' %>
 
-  <%= f.submit %>
+  <%= f.submit class:"submit-button" %>
 <% end %>

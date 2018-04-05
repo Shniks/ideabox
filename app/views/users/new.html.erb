@@ -1,9 +1,12 @@
-<%= form_for @user do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
+<%= stylesheet_link_tag "create_edit" %>
+<div class="login-page">
+  <%= form_for @user do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  
-  <%= f.submit %>
-<% end %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.submit %>
+  <% end %>
+</div>

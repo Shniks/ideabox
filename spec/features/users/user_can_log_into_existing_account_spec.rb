@@ -8,7 +8,7 @@ describe 'User visits the home page' do
         user = User.create(username: "funbucket13", password: "test")
 
         visit '/'
-        click_on 'I already have an account'
+        click_on 'Log In'
 
         expect(current_path).to eq(login_path)
 
@@ -19,7 +19,7 @@ describe 'User visits the home page' do
 
         expect(current_path).to eq(user_path(user))
         expect(page).to have_content("Welcome, #{user.username}!")
-        expect(page).to have_content('Logout')
+        expect(page).to have_link('Log Out')
       end
     end
   end

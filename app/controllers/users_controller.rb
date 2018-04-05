@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    # @user = User.find(params[:id]) #no need for @user as the view uses current_user
+    @user = User.find(params[:id]) #no need for @user as the view uses current_user
   end
 
   private

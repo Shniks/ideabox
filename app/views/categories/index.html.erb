@@ -1,13 +1,13 @@
 <%= stylesheet_link_tag "category" %>
 <header>
-  <h2> List of Categories </h2>
-  <span id="add-label" title="Add a New Category"><%= link_to image_tag("nc_icon.png", height: 35, width: 35), new_category_path %>
+  <h2 class="idea-main-title"> List of Categories </h2>
+  <span id="add-label" title="Add a New Category"><%= link_to image_tag("nc_icon.png", height: 50, width: 50), new_category_path %>
 </header>
 <table>
   <% @categories.each do |category| %>
     <tr class=category_<%= category.id %>>
-      <td><%= category.name %></td>
-      <td title="Delete this Category"><%= link_to image_tag("delete.png", height: 15, width: 15), category_path(category.id), method: "delete" %></td>
+      <td class="info-2"><%= category.name %></td>
+      <td class="delete-icon" title="Delete this Category"><%= link_to image_tag("delete.png", height: 20, width: 20), category_path(category.id), method: "delete" %></td>
     </tr>
   <% end %>
 </table>

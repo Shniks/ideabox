@@ -13,15 +13,29 @@ h3 {
 
 table {
   margin-left: 15px;
-  margin-top: 30px;
+  margin-top: 40px;
+}
+
+.delete-icon {
+  padding-top: 16px;
 }
 
 .failure {
+  position: absolute;
   margin-left: 15px;
-  margin-top: 30px;
+  margin-top: 5px;
   color: red;
   font-family: Helvetica;
-  font-size: 24px;
+  font-size: 20px;
+}
+
+.success {
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 5px;
+  color: green;
+  font-family: Helvetica;
+  font-size: 20px;
 }
 
 #add-label {
@@ -45,4 +59,24 @@ td {
   font-family: Helvetica;
   padding-right: 10px;
   padding-bottom: 15px;
+}
+
+.idea-main-title {
+  margin-left: 10px;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 40px;
+  color: #363636;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+}
+
+.info-2 {
+  font-size: 20px;
+  font-family: Helvetica;
+  color: #363636;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+  padding-top: 15px;
+  list-style-type: none;
 }

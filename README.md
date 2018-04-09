@@ -12,7 +12,7 @@ This purpose of this project is to create an app that lets users record their id
 
 #### Landing Page
 
-[this](/screenshots/landing_page.png)
+![this](/screenshots/landing_page.png)
 
 
 

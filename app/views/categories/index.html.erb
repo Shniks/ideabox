@@ -1,8 +1,8 @@
-<%= stylesheet_link_tag "category" %>
-<header>
-  <h2 class="idea-main-title"> List of Categories </h2>
-  <span id="add-label" title="Add a New Category"><%= link_to image_tag("nc_icon.png", height: 50, width: 50), new_category_path %>
-</header>
+<%= stylesheet_link_tag "index_show" %>
+<table>
+  <td><h3 class="idea-main-title"> List of Categories </h3></td>
+  <td><span class="add-idea-label" title="Add a New Category"><%= link_to image_tag("nc_icon.png", height: 50, width: 50), new_category_path %></td>
+</table>
 <table>
   <% @categories.each do |category| %>
     <tr class=category_<%= category.id %>>

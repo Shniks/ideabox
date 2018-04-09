@@ -14,6 +14,14 @@ This purpose of this project is to create an app that lets users record their id
 
 ![this](/screenshots/landing_page.png)
 
+#### Login Page
+
+![this](/screenshots/login_page.png)
+
+#### Welcome Page
+
+![this](/screenshots/welcome.png)
+
 
 
 ### Project Guidelines  

@@ -22,7 +22,17 @@ This purpose of this project is to create an app that lets users record their id
 
 ![this](/screenshots/welcome.png)
 
+#### Admin Images Index Page
 
+![this](/screenshots/admin_image_index).png)
+
+#### User Ideas Index Page
+
+![this](/screenshots/user_idea_index).png)
+
+#### User Idea Show Page
+
+![this](/screenshots/user_idea_show).png)
 
 ### Project Guidelines  
 

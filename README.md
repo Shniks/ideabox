@@ -6,7 +6,7 @@ Cohort: 1801 BE, Mod 2
 
 ### Project: IdeaBox
 
-This purpose of this project is to create an app that lets users record their ideas. The project is hosted on [Heroku](http://idearepo.heroku.com). Screenshots for some of the pages along with the project guidelines follow.  
+This purpose of this project is to create an app that lets users record their ideas. The project is hosted on [Heroku](https://idearepo.herokuapp.com/). Screenshots for some of the pages along with the project guidelines follow.  
 
 ### Screenshots
 
